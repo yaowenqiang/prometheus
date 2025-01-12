@@ -1,3 +1,4 @@
+
 # install
 
 > apt install prometheus
@@ -23,4 +24,4 @@ apt install nginx
 
 
 
-
+https://sbcode.net/prometheus/delete-timeseries/
