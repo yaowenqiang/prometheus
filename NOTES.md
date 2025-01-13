@@ -21,6 +21,35 @@ apt install nginx
 > promtool check config /etc/prometheus/prometheus.yml
 
 
+promQl
+promQl{job="node"}
+node_cpu_seconds_total{mode=~"irq"}
+
+## Data types
+
++ Scalar 1,0, 0.1234
++ Instent vector  scrape_duration_seconds{instance="localhost:9100"}
++ Range Vector 
+
+node_netstat_Tcp_InSegs{instance="localhost:9100"}[5m]
+node_netstat_Tcp_InSegs{instance="localhost:9100"}[5m:15s]
+rate(node_netstat_Tcp_InSegs{instance="localhost:9100"}[5m:15s])
+
+rate(node_netstat_Tcp_InSegs[5m])
+
+sum(go_threads)
+
+deriv(ceil(rate(node_netstat_Tcp_InSegs{instance="localhost:9100"}[1m]))[1m:])
+
+
+https://prometheus.io/docs/prometheus/latest/querying/functions/
+
+
+
+
+
+
+scrape_duration_seconds
 
 
 
