@@ -82,3 +82,22 @@ scrape_duration_seconds
 
 
 https://sbcode.net/prometheus/delete-timeseries/
+
+
+## Alert rules
+
+
+```yml
+  - name: alert_rules
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 1m
+        labels:
+            severity: critical
+        annotations:
+            summary: 'Instance {{ $labels.instance }} down'
+            description: '{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute.'
+
+```
+
