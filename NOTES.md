@@ -100,4 +100,23 @@ https://sbcode.net/prometheus/delete-timeseries/
             description: '{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute.'
 
 ```
+## Alert Manager
 
+```yml
+
+route:
+    receiver: smtp
+receivers:
+    - name: smtp
+      email_configs:
+          - smarthost: mail.your-email-service-domain:port
+            hello: your-email-service-domain
+            to: 'to@example.com'
+            from: 'from@example.com'
+            auth_username: 'from@example.com'
+            auth_password: 'your-password'
+            send_resolved: true
+            require_tls: false
+
+
+```
