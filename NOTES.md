@@ -101,3 +101,8 @@ https://sbcode.net/prometheus/delete-timeseries/
 
 ```
 
+## Alert Manager
+
+apt install prometheus-alertmanager
+
+
