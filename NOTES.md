@@ -105,4 +105,21 @@ https://sbcode.net/prometheus/delete-timeseries/
 
 apt install prometheus-alertmanager
 
+## Grafana
+
+sudo apt-get install -y adduser libfontconfig1 musl
+wget https://dl.grafana.com/oss/release/grafana_11.4.0_amd64.deb
+sudo dpkg -i grafana_11.4.0_amd64.deb
+
+
+sudo /bin/systemctl start grafana-server
+
+local address
+
+localhost:3000
+
+admin
+admin
+
+
 
