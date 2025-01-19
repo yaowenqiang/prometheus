@@ -140,4 +140,8 @@ admin
 admin
 
 
+## install dashboards
+
+dashboard id : 11074
+
 
