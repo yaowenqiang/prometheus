@@ -144,4 +144,5 @@ admin
 
 dashboard id : 11074
 
+中文版本: 8919
 
